@@ -1,3 +1,4 @@
+/*
 // Two Sum
 const twoSum = (nums, target) => {
 	for (let i = 0; i < nums.length; i++) {
@@ -8,3 +9,13 @@ const twoSum = (nums, target) => {
 		}
 	}
 };
+*/
+
+// Reverse Integer
+const reverse = (x) => {
+	const maxValue = Math.pow(2, 31) - 1;
+	const result =
+		(x > 0 ? 1 : -1) * Math.abs(x).toString().split('').reverse().join('');
+	return result < -maxValue || result > maxValue ? 0 : parseInt(result);
+};
+console.log(reverse(746));
