@@ -23,3 +23,6 @@ console.log(reverse(746));
 // Palindrome Number
 const isPalindrome = (x) =>
 	x.toString().split('').reverse().join('') === x.toString();
+
+// Reverse String
+const reverseString = (s) => s.reverse();
