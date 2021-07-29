@@ -19,3 +19,7 @@ const reverse = (x) => {
 	return result < -maxValue || result > maxValue ? 0 : parseInt(result);
 };
 console.log(reverse(746));
+
+// Palindrome Number
+const isPalindrome = (x) =>
+	x.toString().split('').reverse().join('') === x.toString();
