@@ -35,3 +35,8 @@ const firstUniqChar = (s) => {
 
 	return -1;
 };
+
+// Valid Anagram
+const isAnagram = (s, t) =>
+	t.toLowerCase().split('').sort().join('') ===
+	s.toLowerCase().split('').sort().join('');
