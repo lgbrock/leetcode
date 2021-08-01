@@ -40,3 +40,12 @@ const firstUniqChar = (s) => {
 const isAnagram = (s, t) =>
 	t.toLowerCase().split('').sort().join('') ===
 	s.toLowerCase().split('').sort().join('');
+
+// Fizz Buzz
+const fizzBuzz = (n, arr = []) => {
+	if (n % 3 === 0 && n % 5 === 0) arr.push('FizzBuzz');
+	else if (n % 3 === 0) arr.push('Fizz');
+	else if (n % 5 === 0) arr.push('Buzz');
+	else arr.push(n.toString());
+	return n > 1 ? fizzBuzz((n -= 1), arr) : arr.reverse();
+};
