@@ -49,3 +49,6 @@ const fizzBuzz = (n, arr = []) => {
 	else arr.push(n.toString());
 	return n > 1 ? fizzBuzz((n -= 1), arr) : arr.reverse();
 };
+
+// Contains Duplicate
+const containsDuplicate = (nums) => nums.length !== [...new Set(nums)].length;
