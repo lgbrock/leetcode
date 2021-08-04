@@ -52,3 +52,16 @@ const fizzBuzz = (n, arr = []) => {
 
 // Contains Duplicate
 const containsDuplicate = (nums) => nums.length !== [...new Set(nums)].length;
+
+// Move Zeroes
+const moveZeroes = (nums) => {
+	for (let i = 0; i < nums.length; i++) {
+		if (nums[i] === 0) {
+			nums.splice(i, 1);
+			nums.push(0);
+			i--;
+			length--;
+		}
+	}
+	return nums;
+}
