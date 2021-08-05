@@ -64,4 +64,20 @@ const moveZeroes = (nums) => {
 		}
 	}
 	return nums;
-}
+};
+
+// Plus One
+const plusOne = (digits) => {
+	let carry = 1;
+	for (let i = digits.length - 1; i >= 0; i--) {
+		digits[i] = digits[i] + carry;
+		digits[i] =
+			digits[i] >= 10
+				? ((carry = 1), digits[i] - 10)
+				: ((carry = 0), digits[i]);
+	}
+	if (carry) {
+		digits.unshift(1);
+	}
+	return digits;
+};
