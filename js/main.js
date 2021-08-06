@@ -81,3 +81,11 @@ const plusOne = (digits) => {
 	}
 	return digits;
 };
+
+// Power of Three
+const isPowerOfThree = (n) => {
+	if (n === 0) return false;
+	return n === 1 || (n % 3 === 0 && isPowerOfThree(n / 3));
+}
+
+const isPowerOfThree = (n) => (Math.log(n) / Math.log(3)).toFixed(10) % 1 === 0
