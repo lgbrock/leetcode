@@ -9,7 +9,7 @@ const twoSum = (nums, target) => {
 		}
 	}
 };
-*/
+
 
 // Reverse Integer
 const reverse = (x) => {
@@ -101,6 +101,7 @@ const romanToInt = (s) => {
 	return result;
 }
 
+
 // Best Time to Buy and Sell Stock II
 const maxProfit = (prices) => {
 	let max = 0;
@@ -108,4 +109,21 @@ const maxProfit = (prices) => {
 		if (prices[i] - prices[i - 1] > 0) max += prices[i] - prices[i - 1];
 	}
 	return max;
-}
+};
+*/
+
+// Count Primes
+const countPrimes = (n) => {
+	let isPrime = Array(n).fill(true, 2);
+	let count = 0;
+
+	for (let i = 2; i < n; i++) {
+		if (isPrime[i]) {
+			count++;
+			for (let j = i * i; j < n; j += i) {
+				isPrime[j] = false;
+			}
+		}
+		return count;
+	}
+};
