@@ -127,3 +127,14 @@ const countPrimes = (n) => {
 		return count;
 	}
 };
+
+// First Bad Version
+const firstBadVersion = (n) => {
+	let left = 1, right = n;
+	while (left < right) {
+		let mid = (left + right) >> 1;
+		if (isBadVersion(mid)) right = mid;
+		else left = mid + 1;
+	}
+	return left;
+}
