@@ -148,7 +148,7 @@ const solution = (isBadVersion) => {
 
 // Implement strStr()
 const strStr = (haystack, needle) => {
-		for (let i = 0; i < haystack.length - needle.length + 1; i++) {
+	for (let i = 0; i < haystack.length - needle.length + 1; i++) {
 		let found = true;
 		for (let j = 0; j < needle.length; j++) {
 			if (haystack[i + j] !== needle[j]) {
@@ -159,5 +159,6 @@ const strStr = (haystack, needle) => {
 		if (found) return i;
 	}
 	return -1;
-}
-	
+};
+
+// Quick update
