@@ -161,4 +161,10 @@ const strStr = (haystack, needle) => {
 	return -1;
 };
 
-// Quick update
+// Valid Parentheses
+const isValid = (s) => {
+	while (/(\[\])|(\(\))|({})/.test(s)) {
+		s = s.replace(/(\[\])|(\(\))|({})/g, '');
+	}
+	return !s.length;
+};
