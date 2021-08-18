@@ -195,3 +195,15 @@ const countAndSay = (n) => {
 	result += count + s[s.length - 1];
 	return result;
 }
+
+// Longest Common Prefix
+const longestCommonPrefix = (strs) => {
+	if (!strs.length) return '';
+	let min = strs[0].length;
+	for (let i = 1; i < strs.length; i++) {
+		let j = 0;
+		while (j < min && strs[i][j] === strs[0][j]) j++;
+		min = Math.min(min, j);
+	}
+	return strs[0].substr(0, min);
+}
