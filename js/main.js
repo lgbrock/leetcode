@@ -207,3 +207,18 @@ const longestCommonPrefix = (strs) => {
 	}
 	return strs[0].substr(0, min);
 }
+
+// Max Consecutive Ones
+const findMaxConsecutiveOnes = (nums) => {
+	let max = 0;
+	let count = 0;
+	for (let i = 0; i < nums.length; i++) {
+		if (nums[i] === 1) {
+			count++;
+		} else {
+			max = Math.max(max, count);
+			count = 0;
+		}
+	}
+	return Math.max(max, count);
+}
