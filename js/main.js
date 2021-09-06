@@ -222,3 +222,12 @@ const findMaxConsecutiveOnes = (nums) => {
 	}
 	return Math.max(max, count);
 }
+
+// Find Numbers with Even Number of Digits
+const findNumbers = (n) => {
+	let count = 0;
+	for (let i = 0; i < n.length; i++) {
+		if (String(n[i]).length % 2 === 0) count++;
+	}
+	return count;
+}
