@@ -176,7 +176,7 @@ const singleNumber = (nums) => {
 		result ^= nums[i];
 	}
 	return result;
-}
+};
 
 // Count and Say
 const countAndSay = (n) => {
@@ -194,7 +194,7 @@ const countAndSay = (n) => {
 	}
 	result += count + s[s.length - 1];
 	return result;
-}
+};
 
 // Longest Common Prefix
 const longestCommonPrefix = (strs) => {
@@ -206,7 +206,7 @@ const longestCommonPrefix = (strs) => {
 		min = Math.min(min, j);
 	}
 	return strs[0].substr(0, min);
-}
+};
 
 // Max Consecutive Ones
 const findMaxConsecutiveOnes = (nums) => {
@@ -221,7 +221,7 @@ const findMaxConsecutiveOnes = (nums) => {
 		}
 	}
 	return Math.max(max, count);
-}
+};
 
 // Find Numbers with Even Number of Digits
 const findNumbers = (n) => {
@@ -230,7 +230,7 @@ const findNumbers = (n) => {
 		if (String(n[i]).length % 2 === 0) count++;
 	}
 	return count;
-}
+};
 
 // Squares of a Sorted Array
 const sortedSquares = (nums) => {
@@ -239,6 +239,6 @@ const sortedSquares = (nums) => {
 		result.push(nums[i] * nums[i]);
 	}
 	return result.sort((a, b) => a - b);
-}
+};
 
-// quick update
+// Quick update
