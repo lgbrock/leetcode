@@ -241,4 +241,4 @@ const sortedSquares = (nums) => {
 	return result.sort((a, b) => a - b);
 };
 
-// Quick update
+// Quick Update
