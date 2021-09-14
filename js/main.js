@@ -241,4 +241,35 @@ const sortedSquares = (nums) => {
 	return result.sort((a, b) => a - b);
 };
 
-// Update
+// Duplicate Zeros
+const duplicateZeros = (arr) => {
+	let n = arr.length;
+	let i = 0;
+	while (i < n) {
+		if (arr[i] === 0) {
+			arr.splice(i + 1, 0, 0);
+			n++;
+			i += 2;
+		} else {
+			i++;
+		}
+	}
+	return arr;
+};
+
+// Merge Sorted Array
+const merge = (nums1, m, nums2, n) => {
+	let i = m - 1,
+		j = n - 1,
+		k = m + n - 1;
+	while (i >= 0 && j >= 0) {
+		if (nums1[i] > nums2[j]) {
+			nums1[k--] = nums1[i--];
+		} else {
+			nums1[k--] = nums2[j--];
+		}
+	}
+	while (j >= 0) {
+		nums1[k--] = nums2[j--];
+	}
+};
