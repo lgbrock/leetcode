@@ -273,3 +273,16 @@ const merge = (nums1, m, nums2, n) => {
 		nums1[k--] = nums2[j--];
 	}
 };
+
+// Remove Element
+const removeElement = (nums, val) => {
+	let k = nums.length;
+	for (let i = 0; i < k; i++) {
+		if (nums[i] === val) {
+			nums.splice(i, 1);
+			k--;
+			i--;
+		}
+	}
+	return k;
+};
