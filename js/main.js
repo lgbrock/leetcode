@@ -286,3 +286,7 @@ const removeElement = (nums, val) => {
 	}
 	return k;
 };
+
+// Check If N and Its Double Exist
+const checkIfExist = (arr) =>
+	arr.some((n, ni) => arr.some((m, mi) => mi !== ni && n === 2 * m));
