@@ -290,3 +290,12 @@ const removeElement = (nums, val) => {
 // Check If N and Its Double Exist
 const checkIfExist = (arr) =>
 	arr.some((n, ni) => arr.some((m, mi) => mi !== ni && n === 2 * m));
+
+// Valid Mountain Array
+const validMountainArray = (arr) => {
+	let i = 0,
+		j = arr.length - 1;
+	while (i < j && arr[i] < arr[i + 1]) i++;
+	while (i < j && arr[j] < arr[j - 1]) j--;
+	return i === j && i !== 0 && j !== arr.length - 1;
+};
