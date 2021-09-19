@@ -299,3 +299,13 @@ const validMountainArray = (arr) => {
 	while (i < j && arr[j] < arr[j - 1]) j--;
 	return i === j && i !== 0 && j !== arr.length - 1;
 };
+
+// Replace Elements with Greatest Element on Right Side
+const replaceElements = (arr) => {
+	let result = [];
+	for (let i = 0; i < arr.length - 1; i++) {
+		result.push(Math.max(...arr.slice(i + 1)));
+	}
+	result.push(-1);
+	return result;
+};
