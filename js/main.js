@@ -343,3 +343,14 @@ const heightChecker = (heights) => {
 	}
 	return count;
 };
+
+// Third Maximum Number
+const thirdMax = (nums) => {
+	const arr = [...new Set(nums.sort((a, b) => b - a))];
+
+	if (arr.length < 3) {
+		return arr[0];
+	}
+
+	return arr[2];
+};
