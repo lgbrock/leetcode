@@ -354,3 +354,18 @@ const thirdMax = (nums) => {
 
 	return arr[2];
 };
+
+// Find All Numbers Disappeared in an Array
+const findDisappearedNumbers = (nums) => {
+	const sortSet = [...new Set(nums.sort((a, b) => a - b))];
+	const result = [];
+
+	for (let i = 1, j = 0; i <= nums.length; i++, j++) {
+		if (i != sortSet[j]) {
+			result.push(i);
+			j--;
+		}
+	}
+	return result;
+};
+
