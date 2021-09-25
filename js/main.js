@@ -243,18 +243,18 @@ const sortedSquares = (nums) => {
 
 // Duplicate Zeros
 const duplicateZeros = (arr) => {
-	let n = arr.length;
-	let i = 0;
-	while (i < n) {
-		if (arr[i] === 0) {
-			arr.splice(i + 1, 0, 0);
-			n++;
-			i += 2;
+	let temp = [];
+	for (let elem of arr) {
+		if (elem === 0) {
+			temp.push(0);
+			temp.push(0);
 		} else {
-			i++;
+			temp.push(elem);
 		}
 	}
-	return arr;
+	for (let i = 0; i < arr.length; i++) {
+		arr[i] = temp[i];
+	}
 };
 
 // Merge Sorted Array
@@ -368,4 +368,3 @@ const findDisappearedNumbers = (nums) => {
 	}
 	return result;
 };
-
