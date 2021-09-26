@@ -368,3 +368,11 @@ const findDisappearedNumbers = (nums) => {
 	}
 	return result;
 };
+
+// Rotate Array
+const rotate = (nums, k) => {
+	for (let i = 0; i < k; i++) {
+		nums.unshift(nums.pop());
+	}
+	return nums;
+};
