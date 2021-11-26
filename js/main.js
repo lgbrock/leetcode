@@ -399,7 +399,7 @@ const intersect = (nums1, nums2) => {
 // Valid Palindrome
 const isPalindrome = (s) => {
 	const reg = /[^a-zA-Z0-9]/g;
-	const str = s.toLowerCase().replace(reg, "");
+	const str = s.toLowerCase().replace(reg, '');
 	const len = str.length;
 	let i = 0,
 		j = len - 1;
@@ -409,6 +409,6 @@ const isPalindrome = (s) => {
 		j--;
 	}
 	return true;
-}
+};
 
-// Quick update
+// Another quick update
